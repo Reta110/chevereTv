@@ -12,9 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home.index');
+    return view('channels.ntn24');
 });
-
 
 Route::get('/capitolioTv', function () {
     return view('channels.capitolioTv');
@@ -35,6 +34,11 @@ Route::get('/teleSur', function () {
 Route::get('/cnnEspanol', function () {
     return view('channels.cnnEspanol');
 });
+
 Route::get('/elVenezolanoTv', function () {
     return view('channels.elVenezolanoTv');
+});
+
+Route::get('/radioCaracasRadio', function () {
+    return view('channels.radioCaracasRadio');
 });
