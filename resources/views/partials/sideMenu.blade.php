@@ -5,49 +5,20 @@
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                         <i class="fa fa-television"></i>
-                            </span>Canales</a>
+                        </span>Canales</a>
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <table class="table">
-
-                        <tr>
-                            <td>
-                                <i class="fa fa-television"></i>
-                                <a href="/ntn24"> NTN 24</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-television"></i>
-                                <a href="/capitolioTv"> Capitolio TV</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-television"></i>
-                                <a href="/globovision"> Globovisión</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-television"></i>
-                                <a href="/teleSur"> TeleSur</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-television"></i>
-                                <a href="/cnnEspanol"> CNN en español</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-television"></i>
-                                <a href="/elVenezolanoTv"> El Venezolano TV</a>
-                            </td>
-                        </tr>
+                        @foreach($channels as $channel)
+                            <tr>
+                                <td>
+                                    <i class="fa fa-television"></i>
+                                    <a href="{{route('channel.show',[$channel->id,$channel->slug])}}"> {{$channel->name}}</a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </table>
                 </div>
             </div>
